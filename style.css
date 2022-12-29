@@ -4,12 +4,16 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 *::selection {
   background-color: #20c997;
   color: white;
+}
+
+body {
+  color: #4c4d4d;
+  font-family: "Poppins", sans-serif;
 }
 
 li {
@@ -18,6 +22,11 @@ li {
 
 a {
   color: inherit !important;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #20c997 !important;
 }
 
 p {
@@ -39,6 +48,14 @@ p {
   justify-content: center;
 }
 
+.section {
+  padding: 4.5rem 0;
+}
+
+.section:nth-child(2n + 1) {
+  background-color: #f8f9fa;
+}
+
 .section-heading {
   font-size: 2.5rem;
   font-weight: 600;
@@ -47,14 +64,22 @@ p {
   width: 100%;
   text-align: center;
   position: relative;
+  z-index: 1;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50%;
+  width: 80px;
+  height: 3px;
+  background-color: #20c997;
 }
 
 .section-heading::before {
   content: "";
-}
-
-.section-heading:first-child::before {
-  content: "about me";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,6 +91,30 @@ p {
   font-size: calc(4rem + 4vw);
   line-height: 1.3;
   z-index: -1;
+}
+
+.about .section-heading::before {
+  content: "about me";
+}
+
+.services .section-heading::before {
+  content: "services";
+}
+
+.summary .section-heading::before {
+  content: "summary";
+}
+
+.portfolio .section-heading::before {
+  content: "portfolio";
+}
+
+.testimonial .section-heading::before {
+  content: "testimonial";
+}
+
+.contact .section-heading::before {
+  content: "contact";
 }
 
 /* ----- Specific Selectors ----- */
@@ -182,8 +231,27 @@ p {
   color: white;
 }
 
-.about {
-  padding: 4.5rem 0;
+.footer {
+  color: #252b33;
+  padding: 4.125rem;
+}
+
+.footer__container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__link {
+  color: #20c997 !important;
+}
+
+.footer__link:hover {
+  color: #1baa80 !important;
 }
 
 /* ----- Media Queries ----- */
