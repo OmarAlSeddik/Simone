@@ -18,6 +18,7 @@ body {
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 li {
@@ -44,6 +45,10 @@ h4,
 h5,
 h6 {
   color: #252b33;
+}
+
+textarea {
+  height: 10rem;
 }
 
 .green-text {
@@ -144,6 +149,7 @@ h6 {
   text-align: center;
   position: relative;
   z-index: 1;
+  margin-bottom: 3rem;
 }
 
 .section-heading::after {
@@ -504,6 +510,81 @@ h6 {
 
 .portfolio .section-heading::before {
   content: "portfolio";
+}
+
+.portfolio__links {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio__links li {
+  padding: 0.6rem 1rem;
+  color: #7b8084;
+  cursor: pointer;
+}
+
+.portfolio__links li:first-child {
+  border-bottom: 2px solid #20c997;
+}
+
+.portfolio__links li:hover {
+  color: #20c997;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.image-gallery__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: calc(100% / 3 - (3rem / 3));
+  min-width: 200px;
+}
+
+.image-gallery__image {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.image-gallery__image img {
+  transition: all 0.2s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.overlay h3,
+.overlay h4 {
+  color: white;
+  font-weight: 400;
+}
+
+.image-gallery__image:hover .overlay {
+  opacity: 1;
+}
+
+.image-gallery__image:hover img {
+  scale: 1.05;
 }
 
 .testimonial .section-heading::before {
