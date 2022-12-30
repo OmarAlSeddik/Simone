@@ -75,6 +75,16 @@ h6 {
   color: white;
 }
 
+.outlined-button.gray {
+  border: solid 2px #6c757d;
+  color: #6c757d;
+}
+
+.outlined-button.gray:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
 .contained-button {
   padding: 0.8rem 2.6rem;
   font-size: 1rem;
@@ -107,6 +117,10 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .section {
@@ -333,7 +347,7 @@ h6 {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  width: 40%;
+  width: calc(50% - 1.5rem);
   min-width: 400px;
 }
 
@@ -360,6 +374,128 @@ h6 {
 
 .summary .section-heading::before {
   content: "summary";
+}
+
+.summary__columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.summary__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: calc(50% - 1.5rem);
+  min-width: 400px;
+}
+
+.resume-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+}
+
+.resume-box__date {
+  background-color: #20c997;
+  color: white;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resume-box__heading {
+  font-size: 1.3125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.resume-box__subheading {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.summary__subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #252b33;
+  margin-bottom: -1.5rem;
+}
+
+.summary__skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.summary__skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: calc(50% - 1.5rem);
+  min-width: 400px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #212529;
+  font-weight: 500;
+}
+
+.skill__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: #e9ecef;
+  position: relative;
+}
+
+.skill__bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 0.25rem;
+  background-color: #20c997;
+}
+
+.skill__bar.p65::after {
+  width: 65%;
+}
+
+.skill__bar.p95::after {
+  width: 95%;
+}
+
+.skill__bar.p80::after {
+  width: 80%;
+}
+
+.skill__bar.p70::after {
+  width: 70%;
+}
+
+.skill__bar.p60::after {
+  width: 60%;
+}
+
+.skill__bar.p99::after {
+  width: 99%;
 }
 
 .portfolio .section-heading::before {
